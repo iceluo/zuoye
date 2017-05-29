@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flexbox</title>
+    <style type="text/css">
+.content {
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        background-color: green;
+        width: 300px;
+        height: 100px;
+    }
+    
+    .content2 {
+        display: -webkit-flex;
+        -webkit-flex-direction: row;
+        background-color: green;
+        width: 300px;
+        height: 100px;
+    }
+    
+    .first {
+        background-color: orange;
+        -webkit-flex: 2;
+        -webkit-order: 1;
+    }
+    
+    .second {
+        background-color: red;
+        -webkit-flex: 3;
+        -webkit-order: 2;
+    }
+    
+    .three {
+        background-color: gray;
+        -webkit-flex: 1;
+    }
+    
+    .center {
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        margin-top: 10px;
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+    }
+    
+    .clo {
+        -webkit-column-count: 3;
+        -moz-column-rule-style: dotted;
+        -webkit-column-rule-style: dotted;
+        column-rule-style: dotted;
+        -webkit-column-gap: 10px;
+    }
+    
+    .container {
+        display: -webkit-box;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 1em solid #909;
+        width: 28em;
+    }
+    
+    .container div:nth-child(1) {
+        -webkit-box-sizing: inherit;
+        border: 1em solid #099;
+        width: 50%;
+    }
+    
+    .container div:nth-child(2) {
+        border: 1em solid #990;
+        width: 50%;
+        /* Safari */
+    }
+}
+    </style>
+</head>
+
+<body>
+    <p>新版</p>
+    <div class="content">
+        <div class="first">
+            第一个
+        </div>
+        <div class="second">
+            第二个
+        </div>
+        <div class="three">
+            第三个
+        </div>
+    </div>
+    <br/>
+    <div class="content2">
+        <div class="first">
+            第一个
+        </div>
+        <div class="second">
+            第二个
+        </div>
+        <div class="three">
+            第三个
+        </div>
+    </div>
+    <br/>
+    <p>旧版 居中</p>
+    <div class="center">
+        <img src="http://t12.baidu.com/it/u=3140076260,2512533005&fm=82&s=12A1F10408A3ACD24855DB8F0300F08D&w=121&h=81&img.JPEG" alt="">
+    </div>
+    <p>文字分栏</p>
+    <div class="clo">
+        <img src="http://t12.baidu.com/it/u=3140076260,2512533005&fm=82&s=12A1F10408A3ACD24855DB8F0300F08D&w=121&h=81&img.JPEG" alt=""> 　　从哈佛肯尼迪政府学院毕业，许吉如选择回到祖国，这个对于中国留学生来说很普通的自主选择，却让叙利亚同学羡慕不已。这让许吉如猛然发现，身为中国青年，她竟然“有那么多的自由，有那么多可以发挥的舞台”。 　从哈佛肯尼迪政府学院毕业，许吉如选择回到祖国，这个对于中国留学生来说很普通的自主选择，却让叙利亚同学羡慕不已。这让许吉如猛然发现，身为中国青年，她竟然“有那么多的自由，有那么多可以发挥的舞台”挥的舞台”。 　从哈佛肯尼迪政府学院毕业，许吉如选择回到祖国，这个对于中国留学生来说很普通的自主选择，却让叙利亚同学羡慕不已。这让许吉如猛然发现，身为中国青年，她竟然“有那么多的自由，有那么多可以发挥的舞台”挥的舞台”。 　从哈佛肯尼迪政府学院毕业，许吉如选择回到祖国，这个对于中国留学生来说很普通的自主选择，却让叙利亚同学羡慕不已。这让许吉如猛然发现，身为中国青年，她竟然“有那么多的自由，有那么多可以发挥的舞台”
+    </div>
+    <p>box-sizing 的使用  也就是标准盒子模型 和怪盒子模式</p>
+    <div class="container">
+        <div>这个 div 刚好左半部分。</div>
+        <div>这个 div 超出右半部分。</div>
+    </div>
+</body>
+
+</html>

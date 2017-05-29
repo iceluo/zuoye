@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>极客学院</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style type="text/css">
+    body,
+    ul,
+    li {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .top {
+        /*text-align: center;  */
+    }
+    
+    #header {
+        width: 1000px;
+        margin: 0 auto;
+        height: 60px;
+    }
+    
+    #logo {
+        float: left;
+        display: inline-block;
+        height: 60px;
+        margin-right: 60px;
+        margin-left: 10px;
+    }
+    
+    #logo img {
+        margin-top: 10px;
+    }
+    
+    .header-nav {
+        float: left;
+        display: inline-block;
+    }
+    
+    .header-ul {
+        list-style: none;
+    }
+    
+    .header-ul li {
+        float: left;
+        display: inline-block;
+        margin-right: 60px;
+        height: 60px;
+        line-height: 60px;
+        vertical-align: middle;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    .header-ul i {
+        /*动画*/
+        transition-property: all;
+        transition-duration: .35s;
+        transition-timing-function: ease-in;
+    }
+    
+    .header-ul li:hover {
+        color: #35b558;
+    }
+    
+    .submenu {
+        /*隐藏菜单*/
+        display: none;
+        opacity: 0;
+        position: absolute;
+        z-index: 1000;
+        top: 60px;
+        left: 0;
+        background: #fff;
+        font-size: 12px;
+        color: #666;
+        width: 280px;
+    }
+    
+    .submenu h3 {
+        font-size: 100%;
+    }
+    
+    .submenu a {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 15px;
+        white-space: normal;
+    }
+    
+    .header-ul li:hover i {
+        transform: rotate(180deg);
+    }
+    
+    .header-ul li:hover div {
+        display: block;
+        opacity: 1;
+    }
+    
+    .header-ul a {
+        text-decoration: none;
+    }
+    /*文字*/
+    
+    #header nav .submenu h3 {
+        margin: 10px 0;
+        padding: 0 15px;
+        background: #fafafa;
+        height: 28px;
+        line-height: 28px;
+        font-weight: 300;
+    }
+    
+    .icon-box {
+        float: right;
+        margin-right: 10px;
+        height: 60px;
+        vertical-align: middle;
+    }
+    
+    #header .icon-box span {
+        height: 60px;
+        line-height: 60px;
+        width: 17px;
+        display: inline-block;
+        margin-left: 25px;
+        cursor: pointer;
+    }
+
+ 	#header .icon-box span:hover {
+        color: #35b558;
+            }
+
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="top">
+            <div id="header">
+                <a id="logo" href="#"><img src="logo.png" height="40" width="109">
+                </a>
+                <nav class="header-nav">
+                    <ul class="header-ul">
+                        <li>
+                            <a href="#" style="color: rgb(53, 181, 88);">首页</a>
+                        </li>
+                        <li>职业学院
+                            <i class="glyphicon glyphicon-menu-down"></i>
+                            <div class="submenu school-list">
+                                <h3>前端学院</h3>
+                                <a href="//www.jikexueyuan.com/zhiye/web"><i class="web-icon"></i>Web 前端工程师</a>
+                                <a href="//www.jikexueyuan.com/zhiye/wechatapp"><i class="wechat-icon"></i>微信小程序工程师</a>
+                                <h3>后端学院</h3>
+                                <a href="//www.jikexueyuan.com/zhiye/python"><i class="python-icon"></i>Python Web工程师</a>
+                                <a href="//www.jikexueyuan.com/zhiye/go"><i class="go-icon"></i>Go语言工程师</a>
+                                <h3>移动学院</h3>
+                                <a href="//www.jikexueyuan.com/zhiye/android"><i class="android-icon"></i>Android工程师</a>
+                                <a href="//www.jikexueyuan.com/zhiye/ios"><i class="ios-icon"></i>iOS工程师</a>
+                            </div>
+                        </li>
+                        <li>会员课程
+                            <i class="glyphicon glyphicon-menu-down"></i>
+                        </li>
+                        <li>极客社区
+                            <i class="glyphicon glyphicon-menu-down"></i>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="icon-box">
+                    <span class="glyphicon glyphicon-search" id="search-btn"></span>
+                    <span class="glyphicon glyphicon-search" id="search-btn"></span>
+                    <span class="glyphicon glyphicon-search" id="search-btn"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

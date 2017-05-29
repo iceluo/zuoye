@@ -1,0 +1,189 @@
+div,
+input {
+    border: 0;
+    padding: 0;
+}
+
+header {
+    height: 100px;
+    position: relative;
+}
+
+nav {
+    z-index: 2;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+nav a {
+    display: inline-block;
+    float: left;
+    color: #333;
+    line-height: 24px;
+    font-size: 13px;
+    margin-left: 20px;
+    overflow: hidden;
+    text-decoration: underline;
+}
+
+nav a:hover {
+    color: #00c;
+}
+
+.mid {
+    height: 300px;
+}
+
+footer {
+    position: absolute;
+    bottom: 47px;
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 0;
+    overflow: hidden;
+    color: #999;
+    text-align: center;
+}
+
+footer a {
+    margin-left: 25px;
+    text-decoration: underline;
+    cursor: auto;
+    color: #999;
+}
+
+.icon {
+    height: 165px;
+    text-align: center;
+    position: relative;
+}
+
+.icon img {
+    width: 270px;
+    height: 129px;
+    position: absolute;
+    bottom: 0;
+    margin-left: -135px;
+}
+
+.info {
+    height: 68px;
+    /*background-color: black;*/
+    padding-top: 32px;
+}
+
+.inputdiv {
+    width: 640px;
+    height: 36px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.inputdiv input[type="submit"] {
+    width: 100px;
+    height: 36px;
+    text-align: center;
+    float: right;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+    background-image: none;
+    outline: medium;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    cursor: pointer;
+    user-select: none;
+    white-space: pre;
+}
+
+.inputdiv input[type="text"] {
+    width: 100px;
+    height: 36px;
+    text-align: center;
+    float: right;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+    background-image: none;
+    outline: medium;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    cursor: pointer;
+    user-select: none;
+    white-space: pre;
+}
+
+
+/*中间输入框样式*/
+
+.s_ipt_wr.bg,
+.s_btn_wr.bg,
+#su.bg {
+    background-image: none;
+}
+
+.quickdelete-wrap {
+    position: relative;
+}
+
+.s_ipt_wr {
+    border: 1px solid #b6b6b6;
+    border-top-color: rgb(184, 184, 184);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: transparent;
+    border-right-style: solid;
+    border-right-width: 0;
+    border-bottom-color: rgb(204, 204, 204);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(184, 184, 184);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-color: #7b7b7b #b6b6b6 #b6b6b6 #7b7b7b;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    width: 539px;
+    margin-right: 0;
+    border-right-width: 0;
+    border-color: #b8b8b8 transparent #ccc #b8b8b8;
+    overflow: hidden;
+}
+
+.s_ipt_wr {
+    height: 34px;
+}
+
+#kw {
+    position: relative;
+    width: 460px;
+}
+
+.quickdelete-wrap input {
+    width: 500px;
+}
+
+.s_ipt {
+    width: 526px;
+    height: 22px;
+    font: 16px/18px arial;
+    line-height: 22px\9;
+    margin: 6px 0 0 7px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+}

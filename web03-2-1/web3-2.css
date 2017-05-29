@@ -1,0 +1,207 @@
+body {
+    /*background-color: red;*/
+    padding: 0;
+    margin: 0;
+    background-color: #2f7590;
+}
+
+div,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    background-color: white;
+    margin: 10px auto 20px;
+    height: 512px;
+    width: 700px;
+    border-radius: 23px;
+}
+
+.top {
+    height: 85px;
+    width: 100%;
+    line-height: 84px;
+    position: relative;
+}
+
+.mid {
+    height: 375px;
+    width: 100%-80px;
+    padding: 10px 40px;
+}
+
+.bottom {
+    height: 52px;
+    width: 100%;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 12px;
+    line-height: 150%;
+    text-decoration: none;
+    color: #333;
+}
+
+#topicon {
+    width: 180px;
+    height: 76px;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+
+#topaside {
+    width: 150px;
+    height: 20px;
+    line-height: 20px;
+    text-align: right;
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+}
+
+#topaside>a {
+    font-size: 12px;
+    padding-left: 0;
+    margin-left: 10px;
+    text-decoration: none;
+    color: rgb(255, 0, 153);
+}
+
+#out {
+    height: 100%;
+    width: 100%;
+    border-right: 1px solid #888;
+    border-bottom: 1px solid #888;
+    border-collapse: collapse;
+}
+
+td {
+    border-left: 1px solid #888;
+    border-top: 1px solid #888
+}
+
+#toptd {
+    height: 44px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#sectd {
+    vertical-align: top;
+    font-size: 12px;
+}
+
+#divfirst {
+    height: 36px;
+    position: relative;
+}
+
+#divfirst>span {
+    bottom: 4px;
+    left: 10px;
+    background-color: white;
+    display: inline-block;
+    position: absolute;
+}
+
+#divsecond,
+#divfourth {
+    height: 24px;
+    line-height: 24px;
+}
+
+#divsecond>span,
+#divfourth>span {
+    margin-left: 10px;
+    padding-left: 3px;
+    background-color: #eee;
+    /*width: 100%-80px;*/
+    margin: 0 10px 0;
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#divthird {
+    height: 100px;
+}
+
+
+/*    #divfour {
+        background-color: red;
+    }*/
+
+.redcolor {
+    color: red;
+}
+
+.orangecolor {
+    color: rgb(255, 102, 0);
+}
+
+#intable {
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+#intable td {
+    border: 0;
+}
+
+#intable tr>td:nth-child(1) {
+    width: 100px;
+    text-align: right;
+}
+
+#intable tr>td:nth-child(2) {
+    width: 180px;
+    text-align: left;
+}
+
+#intable tr>td:nth-child(3) {
+    text-align: left;
+    color: #888;
+    line-height: 18px;
+}
+
+#divfith {
+    height: 80px;
+    line-height: 80px;
+    position: relative;
+}
+
+#divfith div:first-child {
+    /*background-color: gray;*/
+    display: inline-block;
+    width: 103px;
+    height: 100%;
+    text-align: right;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+#divfith div:last-child {
+    position: absolute;
+    left: 104px;
+    height: 100%;
+    /*background-color: yellow;*/
+    display: inline-block;
+    line-height: 14px;
+}
+
+#divsixth {
+    height: 70px;
+    text-align: center;
+}
+
+#divsixth div {
+    height: 70px;
+    line-height: 70px;
+    /*vertical-align: middle;*/
+    display: inline-block;
+}

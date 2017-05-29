@@ -1,0 +1,58 @@
+body {
+    font: 12px arial;
+}
+
+header {
+	overflow: hidden;
+}
+
+header nav {
+
+	width: 500px;
+    float: right;
+}
+
+header nav a {
+    margin-left: 15px;
+    display: inline-block;
+    float: left;
+    color: #333;
+    line-height: 24px;
+    font-size: 13px;
+    margin-left: 20px;
+    overflow: hidden;
+    text-decoration: underline;
+}
+
+.mid {
+    text-align: center;
+}
+
+.mid img {
+    width: 270px;
+    height: 129px;
+}
+
+.mid button {
+    width: 100px;
+    height: 36px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+    outline: medium;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    ;
+}
+
+.mid input {
+    width: 460PX;
+    height: 36px;
+}
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+}

@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>极客学院</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style type="text/css">
+    body,
+    div,
+    ul,
+    li,
+    p,
+    h2 {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    
+    a,
+    a:hover {
+        text-decoration: none;
+    }
+    
+    body,
+    div,
+    ul,
+    li,
+    p {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    body {
+        background-color: #f5f5f5;
+    }
+    
+    .top {
+        /*text-align: center;  */
+        background-color: #fff;
+        width: 100%;
+    }
+    
+    #header {
+        width: 1000px;
+        margin: 0 auto;
+        height: 60px;
+    }
+    
+    #logo {
+        float: left;
+        display: inline-block;
+        height: 60px;
+        margin-right: 60px;
+        margin-left: 10px;
+    }
+    
+    #logo img {
+        margin-top: 10px;
+    }
+    
+    .header-nav {
+        float: left;
+        display: inline-block;
+    }
+    
+    .header-ul {
+        list-style: none;
+    }
+    
+    .header-ul li {
+        float: left;
+        display: inline-block;
+        margin-right: 60px;
+        height: 60px;
+        line-height: 60px;
+        vertical-align: middle;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    .header-ul i {
+        /*动画*/
+        transition-property: all;
+        transition-duration: .35s;
+        transition-timing-function: ease-in;
+    }
+    
+    .header-ul li:hover {
+        color: #35b558;
+    }
+    
+    .submenu {
+        /*隐藏菜单*/
+        display: none;
+        opacity: 0;
+        position: absolute;
+        z-index: 1000;
+        top: 50px;
+        left: 0;
+        background: #fff;
+        font-size: 12px;
+        color: #666;
+        width: 280px;
+    }
+    
+    .submenu h3 {
+        font-size: 100%;
+    }
+    
+    .submenu a {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 15px;
+        white-space: normal;
+    }
+    
+    .header-ul li:hover i {
+        transform: rotate(180deg);
+    }
+    
+    .header-ul li:hover div {
+        display: block;
+        opacity: 1;
+    }
+    
+    .header-ul a {
+        text-decoration: none;
+    }
+    /*文字*/
+    
+    #header nav .submenu h3 {
+        margin: 10px 0;
+        padding: 0 15px;
+        background: #fafafa;
+        height: 28px;
+        line-height: 28px;
+        font-weight: 300;
+    }
+    
+    .icon-box {
+        float: right;
+        margin-right: 10px;
+        height: 60px;
+        vertical-align: middle;
+    }
+    
+    #header .icon-box span {
+        height: 60px;
+        line-height: 60px;
+        width: 17px;
+        display: inline-block;
+        margin-left: 25px;
+        cursor: pointer;
+    }
+    
+    #header .icon-box span:hover {
+        color: #35b558;
+    }
+    
+    .up {
+        position: relative;
+        overflow: hidden;
+        width: 1000px;
+        margin: 20px auto;
+        margin-bottom: 40px!important;
+    }
+    
+    .banner {
+        position: relative;
+        background-color: orange;
+        width: 750px;
+        height: 330px;
+        float: left;
+    }
+    
+    .jk-huodong {
+        width: 230px;
+        height: 160px;
+        margin-left: 10px;
+        margin-top: 10px;
+        background-color: green;
+        float: left;
+    }
+    
+    .swiper-slide {
+        width: 750px;
+        height: 330px;
+        position: relative;
+        float: left;
+        background-color: red;
+        background-image: url(https://a1.jikexueyuan.com/home/201704/13/134e/58ef39eb56313.jpg);
+    }
+    
+    .banner-arrow {
+        width: 50px;
+        height: 80px;
+        position: absolute;
+        top: 50%;
+        display: none;
+        opacity: 0;
+        background: url(https://s1.jikexueyuan.com/index/images/arrow-hover_5f6b80f.png) no-repeat center;
+        background-size: 50px 80px;
+    }
+    
+    .banner:hover .banner-arrow {
+        display: block;
+        opacity: 0.5;
+        animation: banner-arrow-animations 0.3s ease-in;
+    }
+    
+    @keyframes banner-arrow-animations {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0.5;
+        }
+    }
+    
+    .banner .banner-arrow:hover {
+        display: block;
+        opacity: 1;
+    }
+    
+    .banner-arrow-right {
+        right: 0;
+        margin-top: -40px;
+        z-index: 2;
+        transform: rotate(180deg);
+    }
+    
+    .banner-arrow-left {
+        left: 0;
+        margin-top: -40px;
+        z-index: 3;
+    }
+    
+    .jk-login {
+        width: 240px;
+        height: 160px;
+        margin-left: 10px;
+        float: left;
+        padding: 26px 29px 24px;
+        background-color: white;
+        font-size: 12px;
+        color: #555;
+        line-height: 16px;
+    }
+    
+    .userImg {
+        float: left;
+        width: 57px;
+        height: 57px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+    
+    .userName {
+        margin-top: 8px;
+        float: left;
+    }
+    
+    .userStatus {
+        margin-top: 17px;
+        float: left;
+    }
+    
+    .loginbutton {
+        font-size: 14px;
+        display: inline-block;
+        height: 32px;
+        border: 1px solid #35b558;
+        border-radius: 2px;
+        line-height: 30px;
+        text-align: center;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: #35b558;
+        -moz-transition: background-color .3s ease-in;
+        -webkit-transition: background-color .3s ease-in;
+        transition: background-color .3s ease-in;
+    }
+    
+    .loginbutton:hover {
+        text-decoration: none;
+        background: #35b558;
+        color: #fff;
+    }
+    
+    .loginbutton-left {
+        margin-right: 10px;
+        margin-top: 20px;
+        float: left;
+        width: 80px;
+    }
+    
+    .loginbutton-right {
+        margin-top: 20px;
+        float: left;
+        width: 80px;
+    }
+    
+    .jk-jiuye {
+        float: left;
+        width: 100%;
+        margin-top: 40px;
+        position: relative;
+        padding-right: 240px;
+    }
+    
+    .paper h2 {
+        font-size: 18px;
+        color: #555;
+        line-height: 18px;
+        height: 18px;
+        margin-bottom: 22px;
+    }
+    
+    .jk-ban {
+        transition: box-shadow .2s linear;
+    }
+    
+    .jk-ban-style {
+        float: left;
+        width: 370px;
+        height: 75px;
+        color: #fff;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding-left: 120px;
+    }
+    
+    .jk-ban-right-style {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 240px;
+        height: 160px;
+    }
+    
+    .jk-ban:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+    
+    .jk-ban p {
+        color: #fff;
+        font-size: 15px;
+        line-height: 75px;
+        text-align: center;
+    }
+    
+    .jk-jiuye .web {
+        background: url(https://s1.jikexueyuan.com/index/images/jiuye-web03_b78e3f6.png) no-repeat center center / 370px 75px;
+    }
+    
+    .jk-jiuye .php {
+        background: url(https://s1.jikexueyuan.com/index/images/jiuye-php03_8cdf521.png) no-repeat center center / 370px 75px;
+    }
+    
+    .jk-jiuye .javaweb {
+        background: url(https://s1.jikexueyuan.com/index/images/jiuye-java03_302dbd8.png) no-repeat center center / 370px 75px;
+    }
+    
+    .jk-jiuye .ui {
+        background: url(https://s1.jikexueyuan.com/index/images/jiuye-ux03_45d7813.png) no-repeat center center / 370px 75px;
+    }
+    
+    .jk-jiuye .right {
+        background: url(http://ubmcmm.baidustatic.com/media/v1/0f0002RrkUoEEKPVBi6BAf.jpg) no-repeat center center / 240px 160px;
+    }
+    
+    .jk-sku {
+        width: 1000px;
+        margin: 10px auto 30px;
+    }
+    
+    .jk-sku ul {
+        width: 100%;
+        height: 270px;
+        list-style: none;
+        padding-right: -20px;
+    }
+    
+    .jk-sku ul li {
+        float: left;
+        width: 235px;
+        margin-right: 20px;
+        height: 100%;
+        border: 1px solid #e9e9e9;
+        transition: box-shadow .5s;
+        -moz-transition: box-shadow .5s;
+        -webkit-transition: box-shadow .5s;
+    }
+    
+    .jk-sku ul li:last-child {
+        margin-right: 0px;
+    }
+    
+    .jk-sku ul li a {
+        display: block;
+        height: 100%;
+    }
+    
+    .jk-sku ul li img {
+        width: 100%;
+        height: 155px;
+    }
+    
+    .skuContainer {
+        padding: 14px;
+        height: 113px;
+        position: relative;
+        background: #fff;
+        text-decoration: none;
+    }
+    
+    .skuContainer .skuTitle {
+        width: 100%;
+        overflow: hidden;
+        font-size: 12px;
+        color: #555;
+        line-height: 18px;
+        height: 36px;
+    }
+    
+    .skuContainer .skuInfo {
+        margin-top: 6px;
+        color: #999;
+        font-size: 12px;
+        line-height: 16px;
+        height: 16px;
+    }
+    
+    .skuContainer .skuPrice {
+        float: left;
+        font-size: 18px;
+        color: #ff5c00;
+        vertical-align: bottom;
+        margin-right: 5px;
+        margin-top: 8px;
+    }
+    
+    .skuContainer .skuThrought {
+        float: left;
+        font-size: 12px;
+        color: #999;
+        margin-top: 14px;
+        text-decoration: line-through;
+        vertical-align: bottom;
+    }
+    
+    .skuContainer .skuNum {
+        display: inline-block;
+        height: 14px;
+        position: absolute;
+        bottom: 14px;
+        right: 14px;
+        color: #999;
+        font-size: 12px;
+    }
+    
+    .daniu {
+        width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .daniu ul {
+        display: block;
+        overflow: hidden;
+    }
+    
+    .daniu ul:last-child {
+        margin-top: 20px;
+    }
+    
+    .daniu ul li {
+        float: left;
+        display: block;
+        width: 261px;
+        height: 139px;
+        background: #3390f3;
+        -moz-transition: background-color .8s ease-in;
+        -webkit-transition: background-color .8s ease-in;
+        transition: background-color .8s ease-in;
+    }
+    
+    .daniu .jiuye li:nth-child(3),
+    .daniu .jiuye li:nth-child(4) {
+        background: #0276f1;
+    }
+    
+    .daniu .mogui li:nth-child(3),
+    .daniu .mogui li:nth-child(4) {
+        background: #F64450;
+    }
+    
+    .daniu .mogui li:nth-child(2),
+    .daniu .mogui li:nth-child(5) {
+        background: #EB313E;
+    }
+    
+    .daniu .jiuye li:hover {
+        background: #0569d3;
+        border: 0;
+        box-shadow: 0 0 0!important;
+    }
+    
+    .daniu .mogui li:hover {
+        background: #ad242e;
+        border: 0;
+        box-shadow: 0 0 0!important;
+    }
+    
+    .daniu .jiuye li:first-child {
+        width: 478px;
+        height: 278px;
+        position: relative;
+        background: url(https://s1.jikexueyuan.com/index/images/daniu-bg2_5bb23e1.png) center center no-repeat;
+        background-size: 480px 278px;
+    }
+    
+    .daniu .mogui li:first-child {
+        width: 478px;
+        height: 278px;
+        position: relative;
+        background: url(https://s1.jikexueyuan.com/index/images/mogui-bg_ee9827b.png) center center no-repeat;
+        background-size: 480px 278px;
+    }
+    
+    .daniu ul li:first-child i {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: #000;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -moz-transition: opacity .8s ease-in;
+        -webkit-transition: opacity .8s ease-in;
+        transition: opacity .8s ease-in;
+    }
+    
+    .daniu ul li:first-child i:hover {
+        opacity: 0.2;
+    }
+    
+    .daniu ul li:not(:first-child) {
+        padding-top: 35px;
+        text-align: center;
+    }
+    
+    .daniu ul li:not(:first-child) span {
+        width: 31px;
+        height: 28px;
+        display: block;
+        margin: 0 auto 15px;
+    }
+    
+    .daniu ul li:not(:first-child) p {
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .daniu .jiuye li:nth-child(2) span {
+        background: url(https://s1.jikexueyuan.com/index/images/daniu-06_5b9a64a.png) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .daniu .jiuye li:nth-child(3) span {
+        background: url(https://s1.jikexueyuan.com/index/images/daniu-05_b18767c.png) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .daniu .jiuye li:nth-child(4) span {
+        background: url(https://s1.jikexueyuan.com/index/images/daniu-08_a15e689.png) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .daniu .jiuye li:nth-child(5) span {
+        background: url(https://s1.jikexueyuan.com/index/images/daniu-07_e81e2d7.png) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .daniu .mogui li:nth-child(2) span {
+        background: url(https://s1.jikexueyuan.com/index/images/mogui-01_08e776e.png) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .daniu .mogui li:nth-child(3) span {
+        background: url(https://s1.jikexueyuan.com/index/images/mogui-02_5e33480.png) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .daniu .mogui li:nth-child(4) span {
+        background: url(https://s1.jikexueyuan.com/index/images/mogui-03_e9f2b48.png) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .daniu .mogui li:nth-child(5) span {
+        background: url(https://s1.jikexueyuan.com/index/images/mogui-04_ce7d6bc.png) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .daniu ul li:first-child .ban {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #fff;
+        font-size: 14px;
+        height: 37px;
+        width: 100px;
+        line-height: 37px;
+        text-align: center;
+        background-image: -webkit-linear-gradient(-90deg, #000 0, rgba(216, 216, 216, 0) 100%);
+        background-image: -o-linear-gradient(-90deg, #000 0, rgba(216, 216, 216, 0) 100%);
+        background-image: -moz-linear-gradient(-90deg, #000 0, rgba(216, 216, 216, 0) 100%);
+        background-image: linear-gradient(-90deg, #000 0, rgba(216, 216, 216, 0) 100%);
+    }
+    
+    .daniu ul li:first-child {
+        padding-top: 40px;
+    }
+    
+    .daniu ul li:first-child span {
+        display: block;
+        height: 10px;
+    }
+    
+    .daniu .top-title {
+        font-size: 37px;
+        text-align: center;
+        color: #fff;
+    }
+    
+    .daniu .title {
+        font-size: 40px;
+        text-align: center;
+        color: #fff;
+    }
+    
+    .daniu .bot-title {
+        font-size: 26px;
+        text-align: center;
+        color: #fff;
+    }
+    
+    .jk-college {
+        width: 1000px;
+        margin: 30px auto 10px;
+        overflow: hidden;
+    }
+    
+    .jk-college h2 {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+    
+    .jk-college ul {
+        list-style: none;
+    }
+    
+    .jk-college ul li {
+        float: left;
+        display: block;
+        background-color: aqua;
+        position: relative;
+    }
+    
+    .jk-college ul li:nth-child(1) {
+        width: 500px;
+        height: 270px;
+        padding-top: 180px;
+    }
+    
+    .jk-college ul li p {
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .jk-college ul li:nth-child(1) p {
+        font-size: 16px;
+    }
+    
+    .jk-college ul li i {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity .8s ease-in;
+        -moz-transition: opacity .8s ease-in;
+        -webkit-transition: opacity .8s ease-in;
+        transition: opacity .8s ease-in;
+    }
+    
+    .jk-college ul li i:hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .2;
+        background-color: #000;
+    }
+    
+    .jk-college ul li:not(:first-child) {
+        width: 240px;
+        height: 130px;
+        margin-left: 10px;
+        padding-top: 88px;
+    }
+    
+    .jk-college ul li:nth-child(4),
+    .jk-college ul li:nth-child(5) {
+        margin-top: 10px;
+    }
+    
+    .jk-college ul li:nth-child(1) {
+        background: url(https://s1.jikexueyuan.com/index/images/bgweb_054d9d5.jpg) no-repeat center / 500px 270px;
+    }
+    
+    .jk-college ul li:nth-child(2) {
+        background: url(https://s1.jikexueyuan.com/index/images/bgpython_c21a999.jpg) no-repeat center / 240px 130px;
+    }
+    
+    .jk-college ul li:nth-child(3) {
+        background: url(https://s1.jikexueyuan.com/index/images/bggo_6ac4e5b.jpg) no-repeat center / 240px 130px;
+    }
+    
+    .jk-college ul li:nth-child(4) {
+        background: url(https://s1.jikexueyuan.com/index/images/bgios_cadb5b0.jpg) no-repeat center / 240px 130px;
+    }
+    
+    .jk-college ul li:nth-child(5) {
+        background: url(https://s1.jikexueyuan.com/index/images/bgwechat_2357330.jpg) no-repeat center / 240px 130px;
+    }
+    
+    .jk-vip {
+        width: 1000px;
+        margin: 30px auto 10px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .jk-vip h2 {
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+    
+    .jk-vip ul {
+        list-style: none;
+        margin-left: -10px;
+        overflow: hidden;
+    }
+    
+    .jk-vip ul li {
+        display: block;
+        float: left;
+        margin-left: 10px;
+        margin-top: 10px;
+        width: 158px;
+        height: 150px;
+        background-color: #fff;
+        border: 1px solid #e9e9e9;
+    }
+    
+    .jk-vip ul li:hover {
+        boedr: 1px solid #ccc;
+        box-shadow: 0 2px 6px #ccc;
+        transition: box-shadow .5s;
+        -moz-transition: box-shadow .5s;
+        -webkit-transition: box-shadow .5s;
+        -o-transition: box-shadow .5s;
+    }
+    
+    .vip-cell li a {
+        text-align: center;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .vip-cell li img {
+        display: inline-block;
+        width: 55px;
+        height: 55px;
+        margin-top: 25px;
+    }
+    
+    .vip-cell li p {
+        color: #555;
+        font-size: 12px;
+        height: 22px;
+        line-height: 22px;
+    }
+    
+    .vip-cell li span {
+        color: #35b558;
+        font-size: 12px;
+        height: 22px;
+        line-height: 22px;
+    }
+    
+    .vip-cell+div {
+        width: 1000px;
+        margin: 30px auto 30px;
+        text-align: center;
+    }
+    
+    .vip-cell+div a {
+        width: 150px;
+    }
+    
+    .jk-gushi {
+        width: 1000px;
+        margin: 30px auto 30px;
+        overflow: hidden;
+    }
+    
+    .jk-gushi ul {
+        list-style: none;
+    }
+    
+    .jk-gushi ul li {
+        display: block;
+        float: left;
+        margin-left: 20px;
+        width: 320px;
+        height: 200px;
+    }
+    
+    .jk-gushi ul li:hover .story-content {
+        border: 1px solid #e9e9e9;
+        box-shadow: 0 2px 6px #ccc;
+    }
+    
+    .jk-gushi ul li:first-child {
+        margin-left: 0px
+    }
+    
+    .story-content {
+        background-color: #fff;
+        width: 100%;
+        height: 121px;
+        border: 1px solid #e9e9e9;
+        position: relative;
+    }
+    
+    .story-content p:before {
+        content: "";
+        background-color: aqua;
+        width: 14px;
+        height: 10px;
+        background: url(https://s1.jikexueyuan.com/index/images/storyicon_4a5e270.png) no-repeat center/ 14px 10px;
+        display: inline-block;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+    
+    .story-content p:after {
+        content: "";
+        background-color: aqua;
+        width: 14px;
+        height: 10px;
+        background: url(https://s1.jikexueyuan.com/index/images/storyicon_4a5e270.png) no-repeat center/ 14px 10px;
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+    }
+    
+    .jk-gushi ul li:hover .story-content {
+        box-shadow: 0 2px 6px #ccc;
+    }
+    
+    .story-content p {
+        height: 100%;
+        overflow: hidden;
+        font-size: 12px;
+        color: #555;
+        line-height: 20px;
+        padding: 20px 25px;
+        text-align: left;
+    }
+    
+    .story-info {
+        padding: 28px 0 0 95px;
+        position: relative;
+        overflow: hidden;
+        height: 80px;
+        width: 100%;
+    }
+    
+    .story-info img {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0px;
+        left: 18px;
+    }
+    
+    .story-info p {
+        font-size: 12px;
+        color: #555;
+        height: 24px;
+        line-height: 24px;
+        overflow: hidden;
+        text-align: left;
+    }
+    
+    .story-info span {
+        display: block;
+        height: 24px;
+        line-height: 24px;
+        color: #999;
+        font-size: 12px;
+        text-align: left;
+    }
+    
+    .jk-hezuo {
+        width: 1000px;
+        margin: 30px auto 10px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .jk-hezuo h2 {
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+    
+    .jk-hezuo ul {
+        list-style: none;
+        margin-left: -10px;
+        overflow: hidden;
+    }
+    
+    .jk-hezuo ul li {
+        display: block;
+        float: left;
+        margin-left: 20px;
+        margin-top: 20px;
+        width: 148px;
+        height: 48px;
+        background-color: #fff;
+        border: 1px solid #e9e9e9;
+    }
+    
+    .jk-hezuo ul li:hover {
+        boedr: 1px solid #ccc;
+        box-shadow: 0 2px 6px #ccc;
+        transition: box-shadow .5s;
+        -moz-transition: box-shadow .5s;
+        -webkit-transition: box-shadow .5s;
+        -o-transition: box-shadow .5s;
+    }
+    
+    .hezuo-cell li a {
+        text-align: center;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+    
+    .hezuo-cell li a img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .hezuo-cell+div {
+        width: 1000px;
+        margin: 30px auto 30px;
+        text-align: center;
+    }
+    
+    .hezuo-cell+div a {
+        width: 150px;
+    }
+    
+    .bottom {
+        width: 100%;
+        background-color: #fff;
+    }
+    
+    .footer {
+        width: 1000px;
+        margin: 0 auto;
+        padding: 25px 0 0 224px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .footer .jk-logo {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 160p;
+        height: 76p;
+    }
+    
+    .footer .jk-logo img {
+        width: 109px;
+        height: 40px;
+    }
+    
+    .footer .jk-logo p {
+        margin-top: 25px;
+        font-size: 14px;
+        color: #333;
+    }
+    
+    .footer dl {
+        width: 135px;
+        color: #808080;
+        float: left;
+        margin-left: 20px;
+    }
+    
+    .footer dl dt {
+        font-size: 14px;
+        line-height: 30px;
+    }
+    
+    .footer dl dd {
+        font-size: 12px;
+        line-height: 30px;
+    }
+    
+    .footer dl dt a {
+        color: #808080;
+    }
+    
+    .footer dl dd a {
+        color: #999999;
+    }
+    
+    .footer dl dd a:hover {
+        color: #35b558;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="top">
+            <div id="header">
+                <a id="logo" href="#"><img src="logo.png" height="40" width="109"> </a>
+                <nav class="header-nav">
+                    <ul class="header-ul">
+                        <li> <a href="#" style="color: rgb(53, 181, 88);">首页</a> </li>
+                        <li>职业学院 <i class="glyphicon glyphicon-menu-down"></i>
+                            <div class="submenu school-list">
+                                <h3>前端学院</h3>
+                                <a href="//www.jikexueyuan.com/zhiye/web"><i class="web-icon"></i>Web 前端工程师</a> <a href="//www.jikexueyuan.com/zhiye/wechatapp"><i class="wechat-icon"></i>微信小程序工程师</a>
+                                <h3>后端学院</h3>
+                                <a href="//www.jikexueyuan.com/zhiye/python"><i class="python-icon"></i>Python Web工程师</a> <a href="//www.jikexueyuan.com/zhiye/go"><i class="go-icon"></i>Go语言工程师</a>
+                                <h3>移动学院</h3>
+                                <a href="//www.jikexueyuan.com/zhiye/android"><i class="android-icon"></i>Android工程师</a> <a href="//www.jikexueyuan.com/zhiye/ios"><i class="ios-icon"></i>iOS工程师</a> </div>
+                        </li>
+                        <li>会员课程 <i class="glyphicon glyphicon-menu-down"></i> </li>
+                        <li>极客社区 <i class="glyphicon glyphicon-menu-down"></i> </li>
+                    </ul>
+                </nav>
+                <div class="icon-box"> <span class="glyphicon glyphicon-search"></span> <span class="glyphicon glyphicon-search"></span> <span class="glyphicon glyphicon-search" id="search-btn"></span> </div>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="up">
+                <div class="banner"> <span id="banner-arrow-left" class="banner-arrow banner-arrow-left"></span> <span id="banner-arrow-right" class="banner-arrow banner-arrow-right"></span>
+                    <a href="" class="swiper-slide"> </a>
+                </div>
+                <div class="jk-login">
+                    <div class="userInfo">
+                        <a href="//my.jikexueyuan.com/setting/user/"> <img src="https://s1.jikexueyuan.com/index/images/headpic_8ce0f6d.jpg" class="userImg"> </a> <span class="userName">Hello,</span>
+                        <p class="userStatus">欢迎成为极客一员</p>
+                        <a href="" class="loginbutton loginbutton-left">登录</a> <a href="" class="loginbutton loginbutton-right">注册</a> </div>
+                </div>
+                <div class="jk-huodong">
+                    <a href="#" target="_blank"> <img src="http://ubmcmm.baidustatic.com/media/v1/0f000PsREsjPbrLlS0L0D6.jpg" title="" alt="" border="0" height="160" width="240"> </a>
+                </div>
+                <div class="jk-jiuye">
+                    <h2>线上就业班</h2>
+                    <a href="" class="jk-ban jk-ban-style web" target="_blank">
+                        <p>WEB大前端工程师就业班</p>
+                    </a>
+                    <a href="#" class="jk-ban jk-ban-style php mr-0" target="_blank">
+                        <p>PHP工程师就业班</p>
+                    </a>
+                    <a href="#" class="jk-ban jk-ban-style javaweb mb-0" target="_blank">
+                        <p>Java Web工程师就业班</p>
+                    </a>
+                    <a href="#" class="jk-ban jk-ban-style ui" target="_blank">
+                        <p>Java Web工程师就业班</p>
+                    </a>
+                    <a href="//#" class="jk-ban jk-ban-right-style right" target="_blank"> </a>
+                </div>
+            </div>
+            <div class="jk-sku">
+                <h2>专业精品课</h2>
+                <ul>
+                    <li>
+                        <a href="" target="_blank"> <img src="https://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20170212/5bcfcebe-7296-4264-b8f5-fa607ccf6b43.jpg">
+                            <div class="skuContainer">
+                                <p class="skuTitle">Android架构模式详解之MVC/MVP/MVVM</p>
+                                <p class="skuInfo">4小时&nbsp;&nbsp;|&nbsp;&nbsp;1门课</p>
+                                <span class="skuPrice">149.00</span> <span class="skuThrought">¥299.00</span> <span class="skuNum">52人学习</span> </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank"> <img src="https://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20170317/d5b02c9c-fc55-4220-99c7-9033fc9c9eed.jpg">
+                            <div class="skuContainer">
+                                <p class="skuTitle">开发自己的影评小程序</p>
+                                <p class="skuInfo">10小时&nbsp;&nbsp;|&nbsp;&nbsp;1门课</p>
+                                <span class="skuPrice">199.00</span> <span class="skuThrought">¥299.00</span> <span class="skuNum">43人学习</span> </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank"> <img src="https://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20161223/401c1254-71e1-4a1b-8767-98760edc1778.jpg">
+                            <div class="skuContainer">
+                                <p class="skuTitle">Python利器，超凡蜘蛛带你“爬”世界</p>
+                                <p class="skuInfo">18小时&nbsp;&nbsp;|&nbsp;&nbsp;1门课</p>
+                                <span class="skuPrice">349.00</span> <span class="skuThrought">¥499.00</span> <span class="skuNum">261人学习</span> </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank"> <img src="https://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20170303/42fcb286-5390-4c5e-8b16-2d821e4ae1b6.jpg">
+                            <div class="skuContainer">
+                                <p class="skuTitle">JavaScript 编程技巧与实战</p>
+                                <p class="skuInfo">8小时&nbsp;&nbsp;|&nbsp;&nbsp;1门课</p>
+                                <span class="skuPrice">79.00</span> <span class="skuThrought">¥129.00</span> <span class="skuNum">69人学习</span> </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="daniu">
+                <h2>线下培训专区</h2>
+                <ul class="jiuye">
+                    <li>
+                        <p class="ban">协议保就业班</p>
+                        <span></span>
+                        <p class="top-title">极客</p>
+                        <h4 class="title">大牛程序员</h4>
+                        <p class="bot-title">0基础，保就业</p>
+                        <i></i> </li>
+                    <li> <span></span>
+                        <p>不就业不交钱</p>
+                    </li>
+                    <li> <span></span>
+                        <p>20人小班教学，全力打造前端精英</p>
+                    </li>
+                    <li> <span></span>
+                        <p>0基础，就业月薪8000起</p>
+                    </li>
+                    <li> <span></span>
+                        <p>120天脱产学习，圆你一个高薪梦</p>
+                    </li>
+                </ul>
+                <ul class="mogui">
+                    <li>
+                        <p class="ban">高强度就业班</p>
+                        <span></span>
+                        <p class="top-title">极客</p>
+                        <h4 class="title">魔鬼程序员</h4>
+                        <p class="bot-title">高端班，</p>
+                        <i></i> </li>
+                    <li> <span></span>
+                        <p>全栈web前端工程师 极客培优品牌</p>
+                    </li>
+                    <li> <span></span>
+                        <p>学习前导课 提升入学可能</p>
+                    </li>
+                    <li> <span></span>
+                        <p>高端培优课程 考核免费入读</p>
+                    </li>
+                    <li> <span></span>
+                        <p>报名考核入口 抢占魔鬼名额</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="jk-college">
+                <h2>职业学院</h2>
+                <ul>
+                    <li class="first-li">
+                        <p>Web 前端工程师</p>
+                        <i></i>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p>Python Web工程师</p>
+                        <i></i>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p>GO 语言工程师</p>
+                        <i></i>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p>iOS 工程师</p>
+                        <i></i>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p>微信小程序工程师</p>
+                        <i></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="jk-vip">
+                <h2>会员课程</h2>
+                <ul class="vip-cell">
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/4_html5_9ab5f1c.png">
+                            <p>Android</p>
+                            <span>90门课</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/4_html5_9ab5f1c.png">
+                            <p>Android</p>
+                            <span>90门课</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/4_html5_9ab5f1c.png">
+                            <p>Android</p>
+                            <span>90门课</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/4_html5_9ab5f1c.png">
+                            <p>Android</p>
+                            <span>90门课</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/4_html5_9ab5f1c.png">
+                            <p>Android</p>
+                            <span>90门课</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/4_html5_9ab5f1c.png">
+                            <p>Android</p>
+                            <span>90门课</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/4_html5_9ab5f1c.png">
+                            <p>Android</p>
+                            <span>90门课</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/4_html5_9ab5f1c.png">
+                            <p>Android</p>
+                            <span>90门课</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/4_html5_9ab5f1c.png">
+                            <p>Android</p>
+                            <span>90门课</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/4_html5_9ab5f1c.png">
+                            <p>Android</p>
+                            <span>90门课</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/4_html5_9ab5f1c.png">
+                            <p>Android</p>
+                            <span>90门课</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/4_html5_9ab5f1c.png">
+                            <p>Android</p>
+                            <span>90门课</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="vip-button">
+                    <a href="" class="loginbutton">全部会员课程</a>
+                </div>
+            </div>
+            <div class="jk-gushi">
+                <h2> 学院故事</h2>
+                <ul>
+                    <li>
+                        <div class="story-content">
+                            <p>
+                                美女程序媛，从运维转岗到前端开发工程师。工作上的变化只是一部分，遇到极客学院更重要的是让我知道了自己的潜力，不被未来的不确定性吓倒，相信有目标，肯努力就可以得到想要的生活。
+                            </p>
+                        </div>
+                        <div class="story-info">
+                            <img src="http://wirrorcdn.jikexueyuan.com/v6/index-a/student-5-avatar.jpg">
+                            <p>杨帆</p>
+                            <span>入职深圳IBM</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="story-content">
+                            <p>
+                                Web大前端工程师就业班五期 03 班学员，某 985 大学信息与计算科学 2016 届毕业生，2 个月完成 16 个任务，被同班同学称为「大神」。2016 年拿到毕业证书的同时也拿到了 15K 高薪的 offer。
+                            </p>
+                        </div>
+                        <div class="story-info">
+                            <img src="http://wirrorcdn.jikexueyuan.com/v6/index-a/student-6-avatar.jpg">
+                            <p>路昕宇</p>
+                            <span>入职 浪弯融科科技公司</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="story-content">
+                            <p>
+                                Android 7期1班学员，本科化学，毕业后考入北航研究生。学编程过程中感觉杂乱无章，想系统学习。看了视频感觉不错，就报名学习。目前入职2个多月，今后还要长期驻扎极客学院。
+                            </p>
+                        </div>
+                        <div class="story-info">
+                            <img src="http://wirrorcdn.jikexueyuan.com/v6/index-a/student-3-avatar.jpg">
+                            <p>刘盘风</p>
+                            <span>入职 中软北京科技有限公司</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="jk-hezuo">
+                <h2>会员课程</h2>
+                <ul class="hezuo-cell">
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/p_cocos_2a0a8f3.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/p_cocos_2a0a8f3.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/p_cocos_2a0a8f3.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/p_cocos_2a0a8f3.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/p_cocos_2a0a8f3.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/p_cocos_2a0a8f3.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/p_cocos_2a0a8f3.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/p_cocos_2a0a8f3.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/p_cocos_2a0a8f3.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/p_cocos_2a0a8f3.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/p_cocos_2a0a8f3.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://s1.jikexueyuan.com/index/images/p_cocos_2a0a8f3.png">
+                        </a>
+                    </li>
+                </ul>
+                <div class="vip-button">
+                    <a href="" class="loginbutton">更多合作企业</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="footer">
+                <div class="jk-logo">
+                    <img src="http://e.jikexueyuan.com/headerandfooter/images/jk-logo-footer.png?t=1491465306000">
+                    <p>极客学院，编程是一种信仰！</p>
+                </div>
+                <dl>
+                    <dt>职业学院</dt>
+                    <dd><a target="_blank" href="//www.jikexueyuan.com/zhiye/web">Web前端工程师</a></dd>
+                    <dd><a target="_blank" href="//www.jikexueyuan.com/zhiye/python">Python Web工程师</a></dd>
+                    <dd><a target="_blank" href="//www.jikexueyuan.com/zhiye/go">Go语言工程师</a></dd>
+                    <!--<dd><a target="_blank" href="//j.jikexueyuan.com/train/android?huodong=jiuye_android_in">Android学院</a></dd>-->
+                    <dd><a target="_blank" href="//www.jikexueyuan.com/zhiye/ios">iOS工程师</a></dd>
+                    <dd><a target="_blank" href="//www.jikexueyuan.com/zhiye/wechatapp">微信小程序工程师</a></dd>
+                </dl>
+                <dl>
+                    <dt>会员课程</dt>
+                    <dd><a target="_blank" href="//www.jikexueyuan.com/course/">课程库</a></dd>
+                    <dd><a target="_blank" href="//www.jikexueyuan.com/path/">知识体系图</a></dd>
+                    <dd><a target="_blank" href="//ke.jikexueyuan.com/zhiye/">职业路径图</a></dd>
+                    <dd><a target="_blank" href="//ke.jikexueyuan.com/xilie/">系列课程</a></dd>
+                    <dd><a target="_blank" href="//www.jikexueyuan.com/tag/">课程标签</a></dd>
+                </dl>
+                <dl>
+                    <dt>极客社区</dt>
+                    <dd><a target="_blank" href="//wenda.jikexueyuan.com/">技术问答</a></dd>
+                    <dd><a target="_blank" href="//wiki.jikexueyuan.com/">Wiki</a></dd>
+                    <dd><a target="_blank" href="//download.jikexueyuan.com/">资源下载</a></dd>
+                    <dd><a target="_blank" href="//qun.jikexueyuan.com/">社群</a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

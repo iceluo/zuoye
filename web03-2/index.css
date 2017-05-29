@@ -1,0 +1,129 @@
+body {
+    /*background-color: red;*/
+    padding: 0;
+    margin: 0;
+    background-color: #2f7590;
+}
+
+div,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    background-color: white;
+    margin: 10px auto 20px;
+    /*height: 512px;*/
+    width: 700px;
+    border-radius: 23px;
+}
+
+.top {
+    height: 85px;
+    width: 100%;
+    line-height: 84px;
+    position: relative;
+}
+
+.bottom {
+    height: 52px;
+    width: 100%;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 12px;
+    line-height: 150%;
+    text-decoration: none;
+    color: #333;
+}
+
+#topicon {
+    width: 180px;
+    height: 76px;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+
+#topaside {
+    width: 150px;
+    height: 20px;
+    line-height: 20px;
+    text-align: right;
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+}
+
+#topaside>a {
+    font-size: 12px;
+    padding-left: 0;
+    margin-left: 10px;
+    text-decoration: none;
+    color: rgb(255, 0, 153);
+}
+
+.mid {
+    padding: 10px 40px;
+    word-wrap: break-word;
+}
+
+.midtable {
+    border-collapse: collapse;
+    border-left: 1px solid #888;
+    border-top: 1px solid #888;
+    width: 100%;
+    height: 100%;
+    white-space: normal;
+}
+
+.midtable tr>td:first-child {
+    font-size: 12px;
+}
+
+.midtable tr>td:nth-child(2) {
+    font-size: 12px;
+    color: #0000ff;
+}
+
+.midtable tr>td:nth-child(2) p {
+    font-size: 12px;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 190px;
+}
+
+label {
+    color: #333;
+    font-size: 12px;
+}
+
+.midtable caption {
+    height: 50px;
+}
+
+.midtable td {
+    border-right: 1px solid #888;
+    border-bottom: 1px solid #888;
+}
+
+.redcolor {
+    color: #f00;
+}
+
+#toptd {
+    text-align: -webkit-center;
+    font-size: 12px;
+    line-height: 150%;
+    text-decoration: none;
+    color: #333333;
+    background-image: url(http://www.qdjj.net/images/beijin1.gif);
+    vertical-align: inherit;
+    display: table-cell;
+}
+
+.submitdiv {
+    height: 84px;
+    text-align: center;
+}

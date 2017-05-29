@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    #box {
+        width: 150px;
+        height: 150px;
+        margin: 75px auto 0 auto;
+        position: relative;
+        /*增加动画*/
+        -webkit-animation-name: animation;
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-duration: 3s;
+        -webkit-transform-style: preserve-3d;
+        -webkit-transform-origin: 75px 75px 0;
+        /*调试视角*/
+        /*-webkit-perspective:138px;*/
+    }
+    
+    #box >div {
+        opacity: 0.5;
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        /*border: 3px solid #000;*/
+        background-color: rgba(255, 200, 100, .8);
+        text-align: center;
+        font-size: 130px;
+    }
+    
+    .A {
+        -webkit-transform: translateZ(75px);
+    }
+    
+    .A >div {
+        background-color: #d00;
+    }
+    
+    .B {
+        -webkit-transform: rotateX(-90deg) translateZ(75px);
+    }
+    
+    .B >div {
+        background-color: #300;
+    }
+    
+    .C {
+        -webkit-transform: rotateX(90deg) translateZ(75px);
+    }
+    
+    .C >div {
+        background-color: #090;
+    }
+    
+    .D {
+        -webkit-transform: rotateY(-180deg) translateZ(75px);
+    }
+    
+    .D >div {
+        background-color: #005;
+    }
+    
+    .E {
+        -webkit-transform: rotateY(-90deg) translateZ(75px);
+    }
+    
+    .E >div {
+        background-color: #804;
+    }
+    
+    .F {
+        -webkit-transform: rotateY(90deg) translateZ(75px);
+    }
+    
+    .F >div {
+        background-color: greenyellow;
+    }
+    
+    .clear {
+        clear: both;
+    }
+    
+    @-webkit-keyframes animation {
+        0% {
+            -webkit-transform: translateZ(75px) rotateX(0deg) rotateY(0deg);
+        }
+        100% {
+            -webkit-transform: translateZ(-75px) rotateX(360deg) rotateY(360deg);
+        }
+    }
+    
+    .child {
+        border: 1px solid #fff;
+        border-radius: 5;
+        width: 48px;
+        height: 48px;
+        float: left;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div class="A">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+        <div class="B">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+        <div class="C">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+        <div class="D">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+        <div class="E">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+        <div class="F">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+    </div>
+</body>
+
+</html>
